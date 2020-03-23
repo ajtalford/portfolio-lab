@@ -8,11 +8,11 @@ Orange color: #e67e22
 /* BASIC SETUP */
 /* ----------------------------------------------- */
 
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 html,
 body {
@@ -25,14 +25,14 @@ body {
     overflow-x: hidden;
 }
 
-.clearfix {zoom: 1;}
+/* .clearfix {zoom: 1;}
 .clearfix:after {
     content: '.';
     clear: both;
     display: block;
     height: 0;
     visibility: hidden;
-}
+} */
 
 /* ----------------------------------------------- */
 /* REUSABLE COMPONENTS */
@@ -397,7 +397,7 @@ header {
     display: inline-block;
     text-align: center;
     margin-right: 25px;
-    float: left;
+    /* float: left; */
     padding: 5px;
 }
 
@@ -669,4 +669,25 @@ footer p {
     opacity: 1;
 }
 
-
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 8.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
